@@ -1,0 +1,6 @@
+<h1><%= @competition["name"] %></h1>
+<ul>
+  <% @matchs.each do |match| %>
+    <li><%= l match["date"].to_date %> : <%= link_to "#{match["title"]}", match_path(match["title"].parameterize) %></li>
+  <% end %>
+</ul>

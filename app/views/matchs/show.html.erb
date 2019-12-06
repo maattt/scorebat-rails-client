@@ -1,0 +1,6 @@
+<div><%= link_to @match["competition"]["name"], competition_path(@match["competition"]["id"]) %></div>
+<h1><%= @match["title"] %> (<%= l @match["date"].to_date %>)</h1>
+<% @match["videos"].each do |video| %>
+  <h2><%= video["title"] %></h2>
+  <%= video["embed"].html_safe %>
+<% end %>

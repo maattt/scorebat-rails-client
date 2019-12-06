@@ -1,0 +1,7 @@
+<h1>Tous les matchs</h1>
+<%= link_to "Par compétitions", competitions_path %>
+<ul>
+  <% @matchs.each do |match| %>
+    <li><%= link_to match["title"], match_path(match["title"].parameterize) %></li>
+  <% end %>
+</ul>
